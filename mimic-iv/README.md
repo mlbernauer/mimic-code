@@ -39,6 +39,12 @@ bq query --use_legacy_sql=False --replace --destination_table=my_bigquery_datase
 
 ### PostgreSQL
 
+#### Podman
+Use `podman.sh` to spin up PostgreSQL container. This script will bind the repo directory to /mnt and DDL/DML scripts can be run from within the container by using exec
+
+`podman exec -it mimic-db bash`
+
+
 The [postgres](/mimic-iv/concepts_postgres) folder contains concepts in a PostgreSQL compatible dialect.
 
 ### DuckDB
