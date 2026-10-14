@@ -1,0 +1,10 @@
+services:
+  mimic:
+    name: mimic
+    image: docker.io/postgres:15
+    ports: 5432:5432
+    environment:
+      - PGDATA=/mnt/pgdata
+      - POSTGRES_PASSWORD=${MIMIC_PG_PASSWORD}
+    volumes:
+      - ${HOME}/.cache/mimic/4.3.1/pgdata/:/mnt/pgdata/
